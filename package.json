@@ -11,7 +11,7 @@
     "test:javascript:dist": "INK_TEST=dist jest --config='jest.config.javascript.js'",
     "test:javascript:legacy": "INK_TEST=legacy jest --config='jest.config.javascript.js'",
     "test:compileFiles": "node src/tests/compile.js",
-    "build": "tsc -p ./ && rollup -c",
+    "build": "tsc -p ./ && rollup -c && rm -R /Users/calummackervoy/Documents/Git/mud/utopian-dialogue/node_modules/inkjs/dist && cp -R dist /Users/calummackervoy/Documents/Git/mud/utopian-dialogue/node_modules/inkjs/dist",
     "lint": "eslint 'src/**/*.ts'",
     "lint:fix": "npm run lint -- --fix",
     "watch": "tsc -p ./ && rollup -c -w",
