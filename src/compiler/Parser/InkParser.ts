@@ -2437,6 +2437,15 @@ export class InkParser extends StringParser {
         }
       }
 
+      // custom semantic commands
+      const command = this.ParseString("<GET_TEXT");
+      if (command != null) {
+        console.log(command);
+      }
+      else {
+        console.log("unable to parse <GET_TEXT");
+      }
+
       const result = new VariableAssignment({
         assignedExpression: expr,
         isGlobalDeclaration: true,
